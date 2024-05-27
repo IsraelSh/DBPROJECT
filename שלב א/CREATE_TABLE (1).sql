@@ -1,15 +1,17 @@
 CREATE TABLE cinema_room
 (
   room_number INT NOT NULL,
-  name VARCHAR(20) NOT NULL,
+  names VARCHAR(20) NOT NULL,
   PRIMARY KEY (room_number)
 );
 
 CREATE TABLE projector_employee
 (
   projector_code INT NOT NULL,
-  date DATE NOT NULL,
-  time DATE NOT NULL,
+  dates DATE NOT NULL,
+  times INT NOT NULL,
+  room_numbeer INT NOT NULL,
+  movie_name VARCHAR(20) NOT NULL,
   PRIMARY KEY (projector_code)
 );
 
@@ -26,9 +28,9 @@ CREATE TABLE seat
 CREATE TABLE movie
 (
   film_code INT NOT NULL,
-  name VARCHAR(20) NOT NULL,
+  names VARCHAR(20) NOT NULL,
   duration INT NOT NULL,
-  category VARCHAR(20) NOT NULL,
+  categorie VARCHAR(20) NOT NULL,
   room_number INT NOT NULL,
   projector_code INT NOT NULL,
   PRIMARY KEY (film_code),
@@ -39,9 +41,10 @@ CREATE TABLE movie
 CREATE TABLE ticket
 (
   identifying_number INT NOT NULL,
-  hour INT NOT NULL,
+  hours INT NOT NULL,
   seat INT NOT NULL,
   price INT NOT NULL,
+  filme_number INT NOT NULL,
   film_code INT NOT NULL,
   PRIMARY KEY (identifying_number),
   FOREIGN KEY (film_code) REFERENCES movie(film_code)
