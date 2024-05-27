@@ -1,6 +1,6 @@
-DROP TABLE food;
-DROP TABLE ticket;
-DROP TABLE movie;
-DROP TABLE seat;
-DROP TABLE projector_employee;
-DROP TABLE cinema_room;
+drop table CINEMA_ROOM cascade constraints;
+drop table PROJECTOR_EMPLOYEE cascade constraints;
+drop table MOVIE cascade constraints;
+drop table TICKET cascade constraints;
+drop table FOOD cascade constraints;
+drop table SEAT cascade constraints;
