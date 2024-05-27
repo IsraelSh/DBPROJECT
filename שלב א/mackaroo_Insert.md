@@ -1,3 +1,4 @@
+![image](https://github.com/IsraelSh/DBPROJECT/assets/35071116/f9fa6b1f-1534-46b4-a058-294abf441096)
 
 insert into CINEMA_ROOM (ROOM_NUMBER, NAMES) values (1, 'Becki');
 insert into CINEMA_ROOM (ROOM_NUMBER, NAMES) values (2, 'Rodd');
