@@ -73,3 +73,31 @@ GROUP BY
     pe.room_numbeer
 ORDER BY 
     number_of_projections DESC;
+
+
+
+
+--Delete All Tickets for a Specific Movie Category
+DELETE FROM ticket
+WHERE film_code IN (
+    SELECT film_code
+    FROM movie
+    WHERE categorie = 'Action'
+);
+
+--Delete specific type of food
+DELETE FROM food
+WHERE food_items LIKE '%coke%';
+
+
+--Update and Replace specific type of food
+UPDATE food
+SET food_items = REPLACE(food_items, 'coke', 'soda')
+WHERE food_items LIKE '%coke%';
+
+
+-- Update cinema room number
+UPDATE projector_employee
+SET room_numbeer = 5
+WHERE room_numbeer = 1;
+
